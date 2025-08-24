@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src="https://previews.dropbox.com/p/thumb/ACoFVyDBngNdq-lEXvFtU62fB6RWEIX0v63T_5NkJGC5lhp63PN0FgQZYDD2rp6m1plr7Ps2-8rWuG2csp1WgFGjDhuJ1KhFafyIlS0VVyCLMswMgMwwFP2fSEfaiTwBrTY8tdkCQxegEY9mdClt_Jcx3jtTKKLSUobzu3egZnBg3WD0oa23iu-k1hPiy92cj6sjfCvccaMNWjb2-vfP9jRkw9DuQg5GWcGRIM_RIcBmBXTABDOq3DvF0a4kYoinep8lzGwG61Yd6gZDAeeegaWC7gozEcA8rXYeGTdzRA_ZQgPUsIk7JxPZfmqsso8yK8Q/p.png" alt="MOTION+" className="h-12" />
+              <img src="/logo.png" alt="MOTION+" className="h-12" />
             </div>
             <p className="mb-4 text-gray-400">
               Professional photography services capturing your special moments with exceptional quality and creativity.

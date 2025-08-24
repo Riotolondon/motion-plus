@@ -1,161 +1,371 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Camera, Users, Briefcase, Heart, Image as ImageIcon } from 'lucide-react';
 import Hero from '../components/Hero';
-import PricingTable from '../components/PricingTable';
 
 const ServicesPage: React.FC = () => {
-  const location = useLocation();
-  
   useEffect(() => {
-    document.title = 'Our Services | MOTION+';
-    
-    // Scroll to the section based on hash
-    const hash = location.hash;
-    if (hash) {
-      const element = document.getElementById(hash.substring(1));
-      if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }, 500);
-      }
+    document.title = 'Our Services | MOTION+ Photography';
+  }, []);
+
+  const photoServices = [
+    {
+      title: 'Portrait Photography',
+      includes: [
+        {
+          main: 'Individual Portrait Sessions',
+          sub: [
+            'Studio or location-based shoots for professional headshots, lifestyle portraits, or creative personal branding.',
+          ]
+        },
+        {
+          main: 'Couple & Engagement Shoots',
+          sub: [
+            'Intimate and romantic photo sessions capturing chemistry and connection.',
+          ]
+        },
+        {
+          main: 'Family Sessions',
+          sub: [
+            'Group portraits for families with creative direction and natural interaction.',
+          ]
+        },
+      ],
+      icon: <Heart className="w-6 h-6 text-brand-blue" />
+    },
+    {
+      title: 'Event Photography',
+      includes: [
+        {
+          main: 'Corporate Events',
+          sub: [
+            'Coverage for conferences, launches, award ceremonies, and networking events.',
+          ]
+        },
+        {
+          main: 'Private Events',
+          sub: [
+            'Birthdays, anniversaries, graduations, and private parties, with candid and posed shots.',
+          ]
+        },
+        {
+          main: 'Weddings',
+          sub: [
+            'Full-day or customized wedding photography packages including pre-wedding shoots and reception coverage.',
+          ]
+        },
+      ],
+      icon: <Heart className="w-6 h-6 text-brand-blue" />
+    },
+    {
+      title: 'Commercial & Product Photography',
+      includes: [
+        {
+          main: 'E-commerce Product Shoots',
+          sub: [
+            'Clean, high-quality images for online stores with consistent backgrounds.',
+          ]
+        },
+        {
+          main: 'Lifestyle Product Photography',
+          sub: [
+            'Creative, in-context shots to showcase products in use.',
+          ]
+        },
+        {
+          main: 'Menu & Food Photography',
+          sub: [
+            'High-end styling and photography for restaurants, chefs, and food brands.',
+          ]
+        },
+      ],
+      icon: <Users className="w-6 h-6 text-brand-blue" />
+    },
+    {
+      title: ' Fashion Photography',
+      includes: [
+        {
+          main: 'Lookbooks & Editorials',
+          sub: [
+            'Styled shoots for fashion designers, boutiques, or magazines.',
+          ]
+        },
+        {
+          main: 'Model Portfolio Shoots',
+          sub: [
+            'Studio and location shoots to build professional model portfolios.',
+          ]
+        },
+      ],
+      icon: <Users className="w-6 h-6 text-brand-blue" />
+    },
+    {
+      title: 'Real Estate & Architecture',
+      includes: [
+        {
+          main: 'Property Listings',
+          sub: [
+            'High-quality interior and exterior photos for real estate agents or developers.',
+          ]
+        },
+        {
+          main: 'Architectural Shoots',
+          sub: [
+            'Creative angles and lighting to highlight design and structure.',
+          ]
+        },
+      ],
+      icon: <ImageIcon className="w-6 h-6 text-brand-blue" />
     }
-  }, [location]);
-
-  const eventPricing = [
-    {
-      title: 'Wedding Photography - Package A',
-      description: '4 hours coverage',
-      price: 'R6,000',
-    },
-    {
-      title: 'Wedding Photography - Package B',
-      description: '8 hours coverage + 100 edited photos',
-      price: 'R12,000',
-    },
-    {
-      title: 'Wedding Photography - Package C',
-      description: 'Full day coverage + 200 edited photos',
-      price: 'R18,000',
-    },
-    {
-      title: 'Engagement Photoshoot',
-      description: '1-hour session + 20 edited photos',
-      price: 'R2,000',
-    },
-    {
-      title: 'Birthday Party - Standard',
-      description: '3 hours coverage + 50 edited photos',
-      price: 'R3,500',
-    },
-    {
-      title: 'Birthday Party - Premium',
-      description: '6 hours coverage + 100 edited photos + photobook',
-      price: 'R6,500',
-    },
   ];
 
-  const corporatePricing = [
+  const videoServices = [
     {
-      title: 'Conference & Event - Half Day',
-      description: '4 hours coverage',
-      price: 'R4,500',
+      title: 'Event Videography',
+      includes: [
+        {
+          main: 'Weddings',
+          sub: [
+            'Cinematic storytelling covering the full day with optional highlight reels and full edits.',
+          ]
+        },
+        {
+          main: 'Corporate Events',
+          sub: [
+            'Professional recap videos, interviews, and promotional edits for company use.',
+          ]
+        },
+        {
+          main: 'Private Celebrations',
+          sub: [
+            'Birthday parties, baby showers, and other special moments documented creatively.',
+          ]
+        },
+      ],
+      icon: <Camera className="w-6 h-6 text-brand-blue" />
     },
     {
-      title: 'Conference & Event - Full Day',
-      description: '8 hours coverage',
-      price: 'R8,500',
+      title: 'Commercial & Promotional Videos',
+      includes: [
+        {
+          main: 'Brand Videos',
+          sub: [
+            'Visual storytelling that showcases your brand’s mission, values, and products.',
+          ]
+        },
+        {
+          main: 'Product Promos',
+          sub: [
+            'Short, engaging videos for ads, social media, or product launches.',
+          ]
+        },
+        {
+          main: 'Corporate Profiles',
+          sub: [
+            'Company overview videos for websites, investor presentations, or onboarding.',
+          ]
+        },
+      ],
+      icon: <Camera className="w-6 h-6 text-brand-blue" />
     },
     {
-      title: 'Corporate Headshots (1-5 people)',
-      description: 'Professional headshots with retouching',
-      price: 'R1,000 per person',
+      title: 'Social Media Content Creation',
+      includes: [
+        {
+          main: 'Short Form Video (Reels, TikToks, Shorts)',
+          sub: [
+            'Trend-aware, engaging content tailored for platform algorithms.',
+          ]
+        },
+        {
+          main: 'Content Days',
+          sub: [
+            'ull-day content capture sessions for brands, influencers, or businesses needing bulk monthly content.',
+          ]
+        },
+      ],
+      icon: <Camera className="w-6 h-6 text-brand-blue" />
     },
     {
-      title: 'Corporate Headshots (6-10 people)',
-      description: 'Professional headshots with retouching',
-      price: 'R850 per person',
+      title: 'Documentary & Storytelling',
+      includes: [
+        {
+          main: 'Mini-Docs',
+          sub: [
+            'Short documentaries that capture real-life stories, brand journeys, or client experiences.',
+          ]
+        },
+        {
+          main: 'Behind-the-Scenes (BTS)',
+          sub: [
+            'Coverage of shoots, creative processes, and project development.',
+          ]
+        },
+      ],
+      icon: <Camera className="w-6 h-6 text-brand-blue" />
     },
     {
-      title: 'Corporate Headshots (11+ people)',
-      description: 'Professional headshots with retouching',
-      price: 'R750 per person',
-    },
+      title: 'Real Estate Videography',
+      includes: [
+        {
+          main: 'Property Tours',
+          sub: [
+            'Dynamic walkthroughs of homes, offices, or developments using gimbal, drone, or handheld filming.',
+          ]
+        },
+        {
+          main: 'Architectural Showcases',
+          sub: [
+            'Highlight the design and features of high-end or modern builds.',
+          ]
+        },
+      ],
+      icon: <Camera className="w-6 h-6 text-brand-blue" />
+    }
   ];
 
-  const portraitPricing = [
-    {
-      title: 'Family Portrait Session',
-      description: '1-hour session + 30 edited photos',
-      price: 'R2,500',
-    },
-    {
-      title: 'Maternity Photoshoot',
-      description: '2-hour session + 40 edited photos',
-      price: 'R3,000',
-    },
-    {
-      title: 'Newborn Photoshoot',
-      description: '3-hour session + 50 edited photos',
-      price: 'R4,500',
-    },
-  ];
+  interface IncludeItem {
+    main: string;
+    sub?: string[];
+  }
 
-  const lifestylePricing = [
-    {
-      title: 'Couple/Anniversary Photoshoot',
-      description: '1-hour session + 25 edited photos',
-      price: 'R2,200',
-    },
-    {
-      title: 'Personal Branding Photography',
-      description: '2-hour session + 50 edited photos',
-      price: 'R3,500',
-    },
-  ];
+  const ServiceCard: React.FC<{
+    title: string;
+    includes: (string | IncludeItem)[];
+    icon: React.ReactNode;
+  }> = ({ title, includes, icon }) => (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="p-6 transition-all duration-300 bg-gray-900 rounded-lg shadow-lg hover:transform hover:scale-105"
+    >
+      <div className="flex items-center gap-3 mb-4">
+        {icon}
+        <h3 className="text-xl font-semibold text-white">{title}</h3>
+      </div>
+
+      <div className="space-y-2">
+        <h4 className="mb-3 font-medium text-gray-300">What's Included:</h4>
+        <ul className="space-y-4">
+          {includes.map((item, index) => (
+            <li key={index}>
+              {typeof item === 'string' ? (
+                <div className="flex items-start gap-2 text-gray-400">
+                  <span className="mt-1 text-brand-blue">•</span>
+                  <span className="text-sm">{item}</span>
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  <div className="flex items-start gap-2">
+                    <span className="mt-1 text-brand-blue">•</span>
+                    <span className="text-sm font-medium text-gray-300">{item.main}</span>
+                  </div>
+                  {item.sub && (
+                    <ul className="ml-6 space-y-1">
+                      {item.sub.map((subItem, subIndex) => (
+                        <li key={subIndex} className="flex items-start gap-2 text-gray-400">
+                          <span className="mt-1 text-brand-blue">-</span>
+                          <span className="text-sm">{subItem}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </motion.div>
+  );
+
+  const ServiceSection: React.FC<{
+    title: string;
+    services: Array<{
+      title: string;
+      includes: (string | IncludeItem)[];
+      icon: React.ReactNode;
+    }>;
+    id: string;
+  }> = ({ title, services, id }) => (
+    <div id={id} className="pt-16 mb-16 -mt-16">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="mb-12 text-center"
+      >
+        <h2 className="mb-4 text-3xl font-bold md:text-4xl">
+          <span className="text-brand-blue">{title}</span> Services
+        </h2>
+        <div className="w-24 h-1 mx-auto bg-brand-blue"></div>
+      </motion.div>
+
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {services.map((service, index) => (
+          <ServiceCard
+            key={index}
+            title={service.title}
+            includes={service.includes}
+            icon={service.icon}
+          />
+        ))}
+      </div>
+    </div>
+  );
 
   return (
     <>
       <Hero 
-        title="Our Services & Pricing"
-        subtitle="Professional photography packages tailored to your needs"
-        backgroundImage="https://previews.dropbox.com/p/thumb/ACp8U4NVPADJ75oLn6e1qOx_sJBO2pVWlLlqr3wa57Tht7NTMnf9btk_vA8TuAArUk9PTQb0rWHDcj-dkLKkW0aktK84zj3bTl3WJcwqg9ZYMM8MgRqRBT_sCFC1Xu1LKlplHikXjGUsZaF22YcmMoxlnnUuKiY9I6eqSFpj7ULRlQC7Zp31wdfVgM1RPhrpnHEvrpOtrY5NTVJVw6VfjSfyUnaFu3T5xWd83pbtcWkgqu08edWXlanS0I-D5onqWPJmGZ_Zkd1b6aN8cyDtCT8KIqZlFnUhNVxgVtfsXjp_jpMQTgqGnAbUxNDK4QL9NOI/p.jpeg"
+        title="Our Photography Services"
+        subtitle="Professional photography packages tailored to capture your special moments"
+        backgroundImage="https://images.pexels.com/photos/3568517/pexels-photo-3568517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
       />
       
       <section className="py-16 bg-black md:py-24">
         <div className="container px-4 mx-auto md:px-6">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Photography Services</h2>
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">What We Offer</h2>
             <p className="max-w-3xl mx-auto text-gray-400">
-              We offer a comprehensive range of professional photography services at competitive rates.
-              All prices include professional editing and digital delivery of your photos.
+              We provide comprehensive photography services with professional equipment, expert editing, 
+              and personalized attention to detail. Each package is designed to capture your unique story 
+              and deliver exceptional results.
             </p>
           </div>
           
-          <div id="event" className="pt-16 -mt-16">
-            <PricingTable category="Event" items={eventPricing} />
-          </div>
+          <ServiceSection
+            title="Photography"
+            services={photoServices}
+            id="photography"
+          />
           
-          <div id="corporate" className="pt-16 -mt-16">
-            <PricingTable category="Corporate" items={corporatePricing} />
-          </div>
-          
-          <div id="portrait" className="pt-16 -mt-16">
-            <PricingTable category="Portrait" items={portraitPricing} />
-          </div>
-          
-          <div id="lifestyle" className="pt-16 -mt-16">
-            <PricingTable category="Lifestyle" items={lifestylePricing} />
-          </div>
+          <ServiceSection
+            title="Videography"
+            services={videoServices}
+            id="videography"
+          />
 
-          <div className="p-8 mt-12 bg-gray-900 rounded-lg">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="p-8 mt-16 text-center bg-gray-900 rounded-lg"
+          >
+            <ImageIcon className="w-12 h-12 mx-auto mb-4 text-brand-blue" />
             <h3 className="mb-4 text-2xl font-bold">Custom Packages</h3>
-            <p className="mb-4 text-gray-300">
-              Need something specific? We can create custom photography packages tailored to your unique requirements.
+            <p className="max-w-2xl mx-auto mb-6 text-gray-300">
+              Need something specific? We create custom packages tailored to your unique requirements. 
+              Whether it's a special event, commercial project, or creative collaboration, we'll work with you to 
+              design the perfect solution.
             </p>
-            <p className="text-gray-300">
-              Contact us to discuss your project and get a personalized quote.
+            <p className="text-gray-400">
+              Contact us to discuss your project and receive a personalized quote based on your specific needs.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
