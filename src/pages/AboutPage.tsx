@@ -36,7 +36,7 @@ const AboutPage: React.FC = () => {
       <Hero 
         title="About MOTION+"
         subtitle="Professional photographers capturing life's precious moments"
-        backgroundImage="https://previews.dropbox.com/p/thumb/ACr6qdsf1sEZh_sR4nYnw55ZUjr6tZqqiKPZa90zzF8HsQTedrv47XJeMb7vK6-dbpzOSrCEK4OwMwcdF2CJIO8ZHPT2JSOXxKoMaZKCFrVCOWzWclit6riuC4WMlXTxfa6_PzmO7TF_Ayityj8twphFEQnB57gMDvgtMnQR5XxHJHY0GlmNs95B31a3pee6utB_b_BBd4nmRQpskGV52kPv4dXregWTaE5TGGPYRtAhtvVoJgz_SCWnNg4-nGKOLTqF53PL6y7WBm8aCeY_rENoU_iQVhf19B72ZYdbcYA5_cqZ_Q7zluPlMp8N4hB4MEM/p.jpeg"
+        backgroundImage="https://images.unsplash.com/photo-1581591524425-c7e0978865fc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
       
       <section className="py-16 bg-black md:py-24">
@@ -73,7 +73,7 @@ const AboutPage: React.FC = () => {
               className="relative"
             >
               <img 
-                src="https://previews.dropbox.com/p/thumb/ACpL524wmreeTQ13MknYcky83obMJHr-TUrQ1a16KpDjIXGq74fUNUa2IMzfzx-vUqXKE-PX9EyfBDzNuamkVi6HnC9snTFwE_hn4EngKpJ22lvj7UwRKIUPjA7s58UPSUZiKVUShemfgMBm1ddCZJ2fzIgVydZzy2E_QgARWWFPL9-I1Mr5sPxqaemBnJJ9Zj_18B_j380_5uaaqfDxpRSz2ZURT6SPIQsF-rvukYWHVI7ZvpTsse2eMT7CyVR0-1Zfg_6p4Gb568ZuIgkynpx0/p.png" 
+                src="https://ik.imagekit.io/secula/MOTION/DSCF0471(1).jpg?updatedAt=1756437078872" 
                 alt="Photographer at work" 
                 className="rounded-lg shadow-lg"
               />

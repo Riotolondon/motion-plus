@@ -322,7 +322,7 @@ const ServicesPage: React.FC = () => {
       <Hero 
         title="Our Photography Services"
         subtitle="Professional photography packages tailored to capture your special moments"
-        backgroundImage="https://images.pexels.com/photos/3568517/pexels-photo-3568517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        backgroundImage="https://ik.imagekit.io/secula/MOTION/iGovu_Final/Model_Pictures/1G5A2113.jpg?updatedAt=1756434246810"
       />
       
       <section className="py-16 bg-black md:py-24">

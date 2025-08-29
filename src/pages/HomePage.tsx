@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Camera, Users, Briefcase, Image } from 'lucide-react';
+import { Camera, Users, Briefcase, Image, Video } from 'lucide-react';
 import Hero from '../components/Hero';
 import ServiceCard from '../components/ServiceCard';
 import TestimonialCard from '../components/TestimonialCard';
@@ -39,6 +39,36 @@ const HomePage: React.FC = () => {
       icon: <Image className="w-5 h-5 text-white" />,
       image: 'https://www.dropbox.com/scl/fi/04s0sfqvgfm0oftz89dio/1G5A0528.jpg?rlkey=oxmi4x67wdsmvy0r5gfszrd2o&st=nhvb1h7v&raw=1&dl=0',
       link: '/services#lifestyle'
+    },
+
+    // Videography services
+    {
+      title: 'Event Videography',
+      description: 'Cinematic coverage for weddings, parties and live events — highlight reels, full edits and ceremony coverage.',
+      icon: <Video className="w-5 h-5 text-white" />,
+      image: 'https://images.pexels.com/photos/3765131/pexels-photo-3765131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      link: '/services#videography'
+    },
+    {
+      title: 'Commercial Videography',
+      description: 'Product films, brand videos and ad-ready content for web and social platforms.',
+      icon: <Video className="w-5 h-5 text-white" />,
+      image: 'https://images.pexels.com/photos/3182753/pexels-photo-3182753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      link: '/services#videography'
+    },
+    {
+      title: 'Real Estate Videography',
+      description: 'Dynamic walkthroughs, aerial property showcases and twilight films to elevate listings.',
+      icon: <Video className="w-5 h-5 text-white" />,
+      image: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      link: '/services#videography'
+    },
+    {
+      title: 'Social Video Production',
+      description: 'Short-form, platform-optimized videos for reels, ads, and influencer content.',
+      icon: <Video className="w-5 h-5 text-white" />,
+      image: 'https://images.pexels.com/photos/3549463/pexels-photo-3549463.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      link: '/services#videography'
     }
   ];
 
@@ -67,7 +97,7 @@ const HomePage: React.FC = () => {
         subtitle="Professional photography services for all your special moments"
         buttonText="View Our Work"
         buttonLink="/gallery"
-        backgroundImage="https://www.dropbox.com/scl/fi/iuvd1efk7v1buue7gzgi3/jakob-owens-1jQz-T8WTKc-unsplash.jpg?rlkey=6evsoaqfez73o271p9kz3k2za&st=ai7ywyo0&raw=1&dl=0"
+        backgroundImage="https://ik.imagekit.io/secula/MOTION/COLORS/_MG_6012.jpg?updatedAt=1756433879331"
       />
 
       {/* About Section */}
@@ -81,7 +111,7 @@ const HomePage: React.FC = () => {
               viewport={{ once: true }}
             >
               <img 
-                src="https://www.dropbox.com/scl/fi/hrf0quhshdrr90z10wcqf/IMG_7871.jpg?rlkey=q49ftf2yju42wexmb5h9h7yqn&st=jfx8rz5y&raw=1&dl=0" 
+                src="https://ik.imagekit.io/secula/MOTION/iGovu_Final/1G5A2025.jpg?updatedAt=1756436072913" 
                 alt="Photographer with camera" 
                 className="rounded-lg shadow-lg object-cover h-[500px] w-full"
               />
@@ -134,6 +164,15 @@ const HomePage: React.FC = () => {
                 />
               </Link>
             ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              to="/services"
+              className="inline-block px-6 py-3 font-medium transition-colors duration-300 border-2 rounded-md border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white"
+            >
+              View All Services
+            </Link>
           </div>
         </div>
       </section>
