@@ -92,13 +92,53 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <Hero 
-        title="Capturing Moments That Last Forever"
-        subtitle="Professional photography services for all your special moments"
-        buttonText="View Our Work"
-        buttonLink="/gallery"
-        backgroundImage="https://ik.imagekit.io/secula/MOTION/COLORS/_MG_6012.jpg?updatedAt=1756433879331"
-      />
+      <div className="relative">
+        <Hero 
+          title="Capturing Moments That Last Forever"
+          subtitle="Professional photography services for all your special moments"
+          buttonText="View Our Work"
+          buttonLink="/gallery"
+          backgroundImage="https://ik.imagekit.io/secula/MOTION/COLORS/_MG_6012.jpg?updatedAt=1756433879331"
+        />
+
+        {/* Floating announcement card: responsive - stacks on xs, overlays on sm+ */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+          className="z-20 sm:absolute left-1/2 sm:bottom-[-36px] md:bottom-[-54px] transform -translate-x-1/2 w-full sm:w-[92%] md:w-3/4 lg:w-2/3 max-w-4xl px-4"
+        >
+          <div className="flex flex-col items-center gap-4 p-4 border shadow-lg sm:flex-row md:p-6 bg-white/5 backdrop-blur-sm border-white/10 rounded-xl">
+            <img
+              src="https://ik.imagekit.io/secula/MOTION/1G5A0261.jpg?updatedAt=1756512542331"
+              alt="Press Play on MOTION+"
+              className="flex-shrink-0 object-cover w-full h-40 rounded-md sm:w-20 sm:h-20"
+            />
+            <div className="flex-1 text-center sm:text-left">
+              <h4 className="text-lg font-semibold">
+                Press Play on <span className="text-brand-blue">MOTION+</span>
+              </h4>
+              <p className="mt-1 text-sm text-gray-300">
+                A show hosted by MOTION+ — The Spotlight for emerging stars.
+              </p>
+              <div className="flex flex-col items-center justify-center gap-3 mt-3 sm:flex-row sm:justify-start">
+                <Link
+                  to="/press-play"
+                  className="w-full px-4 py-2 text-sm font-medium text-center text-white rounded-md sm:w-auto bg-brand-blue hover:bg-blue-600"
+                >
+                  Watch Now
+                </Link>
+                <Link
+                  to="/press-play"
+                  className="w-full text-sm text-center text-gray-300 underline sm:w-auto"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
 
       {/* About Section */}
       <section className="py-16 bg-black md:py-24">
