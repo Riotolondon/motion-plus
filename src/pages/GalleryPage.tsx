@@ -39,7 +39,7 @@ const GalleryPage: React.FC = () => {
   const [selectedCollection, setSelectedCollection] = useState<string | null>(null)
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
-  useEffect(() => { document.title = 'Gallery | MOTION+ Photography' }, [])
+  useEffect(() => { document.title = 'Gallery | MOTION+' }, [])
 
   // NEW: fetch from Sanity
   useEffect(() => {
@@ -95,8 +95,8 @@ const GalleryPage: React.FC = () => {
   return (
     <>
       <Hero
-        title={selectedCollection ? currentCollection?.title || 'Gallery' : 'Our Photography Portfolio'}
-        subtitle={selectedCollection ? '' : 'Explore our work across various styles'}
+        title={selectedCollection ? currentCollection?.title || 'Gallery' : 'Our Portfolio'}
+        subtitle={selectedCollection ? '' : 'Explore the MOTION'}
         backgroundImage="https://ik.imagekit.io/secula/MOTION/iGovu_Final/Model_Pictures/1G5A2129.jpg"
       />
 

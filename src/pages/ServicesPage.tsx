@@ -5,7 +5,7 @@ import Hero from '../components/Hero';
 
 const ServicesPage: React.FC = () => {
   useEffect(() => {
-    document.title = 'Our Services | MOTION+ Photography';
+    document.title = 'Our Services | MOTION+';
   }, []);
 
   const photoServices = [
@@ -320,8 +320,8 @@ const ServicesPage: React.FC = () => {
   return (
     <>
       <Hero 
-        title="Our Photography Services"
-        subtitle="Professional photography packages tailored to capture your special moments"
+        title="Our Services"
+        subtitle="Professional Photography & Videography packages tailored to capture your moments"
         backgroundImage="https://ik.imagekit.io/secula/MOTION/iGovu_Final/Model_Pictures/1G5A2113.jpg?updatedAt=1756434246810"
       />
       

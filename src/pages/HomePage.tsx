@@ -74,17 +74,17 @@ const HomePage: React.FC = () => {
 
   const testimonials = [
     {
-      quote: "MOTION+ Photography captured our wedding day beautifully. The photos exceeded our expectations, and the photographer was professional and unobtrusive.",
+      quote: "MOTION+ captured our wedding day beautifully. The photos and video exceeded our expectations, and the team was professional and unobtrusive.",
       author: "Sarah & Michael",
       role: "Wedding Clients"
     },
     {
-      quote: "The corporate headshots for our team were excellent. Quick, professional service with great results that we're proud to use on our website.",
+      quote: "The corporate headshots and promotional video for our team were excellent. Quick, professional service with great results that we're proud to use on our website.",
       author: "James Wilson",
       role: "Marketing Director"
     },
     {
-      quote: "Our family portrait session was so much fun, and the photos are treasures we'll keep forever. Highly recommend MOTION+ for any photography needs.",
+      quote: "Our family portrait session was so much fun, and the photos and video are treasures we'll keep forever. Highly recommend MOTION+ for any photography or videography needs.",
       author: "The Thompson Family",
       role: "Portrait Clients"
     }
@@ -95,8 +95,8 @@ const HomePage: React.FC = () => {
       <div className="relative">
         <Hero 
           title="Capturing Moments That Last Forever"
-          subtitle="Professional photography services for all your special moments"
-          buttonText="View Our Work"
+          subtitle="Professional Multimedia services for all your special moments"
+          buttonText="Explore the MOTION"
           buttonLink="/gallery"
           backgroundImage="https://ik.imagekit.io/secula/MOTION/COLORS/_MG_6012.jpg?updatedAt=1756433879331"
         />
@@ -152,7 +152,7 @@ const HomePage: React.FC = () => {
             >
               <img 
                 src="https://ik.imagekit.io/secula/MOTION/iGovu_Final/1G5A2025.jpg?updatedAt=1756436072913" 
-                alt="Photographer with camera" 
+                alt="MOTION+" 
                 className="rounded-lg shadow-lg object-cover h-[500px] w-full"
               />
             </motion.div>
@@ -167,10 +167,10 @@ const HomePage: React.FC = () => {
                 About <span className="text-brand-blue">MOTION+</span>
               </h2>
               <p className="mb-6 text-gray-300">
-                We are a team of passionate photographers dedicated to capturing the essence of your special moments. At MOTION+, we believe every picture tells a story, and we're committed to making sure your story is told with creativity, professionalism, and technical excellence.
+                We're a team of passionate photographers and videographers dedicated to capturing the essence of your special moments. At MOTION+, we believe every picture and video tells a story, and we're committed to making sure your story is told with creativity, professionalism, and technical excellence.
               </p>
               <p className="mb-8 text-gray-300">
-                With years of experience across various photography specialties, we bring a unique perspective to every shoot. Our motto [don't Blink] reminds us and our clients to cherish every moment, as we're dedicated to preserving them forever through our lens.
+                With years of experience across various photography and videography specialties, we bring a unique perspective to every shoot. Our motto [don't Blink] reminds us and our clients to cherish every moment, as we're dedicated to preserving them forever through our lens and camera.
               </p>
               <Link
                 to="/about"
@@ -189,7 +189,7 @@ const HomePage: React.FC = () => {
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Services</h2>
             <p className="max-w-3xl mx-auto text-gray-400">
-              We offer a comprehensive range of professional photography services tailored to your specific needs.
+              We offer a comprehensive range of professional photography and videography services tailored to your specific needs.
             </p>
           </div>
 
@@ -222,7 +222,7 @@ const HomePage: React.FC = () => {
         <div className="container px-4 mx-auto text-center md:px-6">
           <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">Ready to Capture Your Special Moments?</h2>
           <p className="max-w-3xl mx-auto mb-8 text-white text-opacity-90">
-            Let's work together to create stunning images that you'll cherish for a lifetime.
+            Let's work together to create stunning photos and videos that you'll cherish for a lifetime.
           </p>
           <Link
             to="/contact"

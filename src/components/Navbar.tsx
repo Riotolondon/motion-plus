@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
       <div className="container px-4 mx-auto md:px-6">
         <nav className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="MOTION+" className="h-12" />
+            <img src="https://ik.imagekit.io/secula/MOTION/Branding/Motion+%20Watermark.png?updatedAt=1756509025611" alt="MOTION+" className="h-12" />
           </Link>
 
           {/* Desktop Navigation */}
