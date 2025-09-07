@@ -14,58 +14,58 @@ const HomePage: React.FC = () => {
   const services = [
     {
       title: 'Event Photography',
-      description: 'Capture the essence of your special events with our professional event photography services, including weddings, birthdays, and engagements.',
+      description: 'We capture all the magic at your special events - from intimate birthday parties to grand weddings. Every moment, every emotion, beautifully preserved.',
       icon: <Users className="w-5 h-5 text-white" />,
-      image: 'https://www.dropbox.com/scl/fi/hvdrquzu4b9ttk0qesuzt/IMG_6577.jpg?rlkey=g180zzat3cxp36omfm9oxxnm2&st=uofp1yvv&raw=1&dl=0',
+      image: 'https://www.dropbox.com/scl/fi/04s0sfqvgfm0oftz89dio/1G5A0528.jpg?rlkey=oxmi4x67wdsmvy0r5gfszrd2o&st=nhvb1h7v&raw=1&dl=0',
       link: '/services#event'
     },
     {
       title: 'Corporate Photography',
-      description: 'Professional corporate photography for conferences, events, and executive headshots that strengthen your brand image.',
+      description: 'Professional headshots and corporate events that make your team look amazing. Perfect for websites, LinkedIn, and company materials.',
       icon: <Briefcase className="w-5 h-5 text-white" />,
       image: 'https://www.dropbox.com/scl/fi/yunpi3ewedr0r8jfv2wep/IMG_4278.jpg?rlkey=s63yr5mhy5xxgoku3yp3j4znk&st=9ewj9yu3&raw=1&dl=0',
       link: '/services#corporate'
     },
     {
       title: 'Portrait Photography',
-      description: 'Beautiful portrait photography for individuals, families, maternity, and newborns with a focus on natural expressions.',
+      description: 'Family portraits, maternity shoots, newborn sessions - we love capturing life\'s precious milestones with warmth and authenticity.',
       icon: <Camera className="w-5 h-5 text-white" />,
       image: 'https://www.dropbox.com/scl/fi/va3pdv4qjoeezgtt4uyzm/1G5A1070.jpg?rlkey=ywqd8fx1omhh9e3u219rdb8dw&st=i1o16zzs&raw=1&dl=0',
       link: '/services#portrait'
     },
     {
-      title: 'Lifestyle Photography',
-      description: 'Creative lifestyle photography for couples, personal branding, and storytelling that captures authentic moments.',
+      title: 'Fashion Photography',
+      description: 'Creative fashion shoots, personal branding, and lifestyle photography that tells your unique story with style and flair.',
       icon: <Image className="w-5 h-5 text-white" />,
-      image: 'https://www.dropbox.com/scl/fi/04s0sfqvgfm0oftz89dio/1G5A0528.jpg?rlkey=oxmi4x67wdsmvy0r5gfszrd2o&st=nhvb1h7v&raw=1&dl=0',
+      image: 'https://ik.imagekit.io/secula/MOTION/iGovu_Final/Model_Pictures/1G5A2102.jpg?updatedAt=1756434232980',
       link: '/services#lifestyle'
     },
 
     // Videography services
     {
       title: 'Event Videography',
-      description: 'Cinematic coverage for weddings, parties and live events — highlight reels, full edits and ceremony coverage.',
+      description: 'Cinematic wedding films, party highlights, and event coverage that brings your special moments to life. Perfect for sharing and reliving.',
       icon: <Video className="w-5 h-5 text-white" />,
-      image: 'https://images.pexels.com/photos/3765131/pexels-photo-3765131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://ik.imagekit.io/secula/MOTION/Cover%20Photos/sid-suratia-9dO0uf0NYDc-unsplash.jpg?updatedAt=1757289185334',
       link: '/services#videography'
     },
     {
       title: 'Commercial Videography',
-      description: 'Product films, brand videos and ad-ready content for web and social platforms.',
+      description: 'Brand videos, product showcases, and promotional content that gets your message across. Perfect for social media and marketing.',
       icon: <Video className="w-5 h-5 text-white" />,
-      image: 'https://images.pexels.com/photos/3182753/pexels-photo-3182753.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      image: 'https://ik.imagekit.io/secula/MOTION/Cover%20Photos/kyle-loftus-5MUw_NHo5i4-unsplash.jpg?updatedAt=1757289184920',
       link: '/services#videography'
     },
     {
       title: 'Real Estate Videography',
-      description: 'Dynamic walkthroughs, aerial property showcases and twilight films to elevate listings.',
+      description: 'Property walkthroughs and aerial shots that make listings stand out. We help sell properties with stunning visual storytelling.',
       icon: <Video className="w-5 h-5 text-white" />,
       image: 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       link: '/services#videography'
     },
     {
       title: 'Social Video Production',
-      description: 'Short-form, platform-optimized videos for reels, ads, and influencer content.',
+      description: 'TikTok-ready content, Instagram reels, and short-form videos that engage your audience and boost your online presence.',
       icon: <Video className="w-5 h-5 text-white" />,
       image: 'https://images.pexels.com/photos/3549463/pexels-photo-3549463.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       link: '/services#videography'
